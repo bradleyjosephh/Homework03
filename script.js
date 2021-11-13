@@ -25,7 +25,7 @@ if (!lowerList &&  !upperList && !specialEdit && !numEdit) {
 };
 
 // validating web choices length
-let passLength = prompt("Enter desired password length between 8-128 characters long");
+let passLength = parseInt(prompt("Enter desired password length between 8-128 characters long"));
 
 if (passLength <8 ||passLength >128 || isNaN(passLength)){
     alert("Please select a valid number between 8 and 128");
@@ -36,28 +36,58 @@ let inputChar = [];
 
 let guarenteedInput = [];
 
+// if (lowerList) {
+//     inputChar = inputChar.concat(lowerCase);
+//     guarenteedInput.push(lowerCase)])
+//         console.log(inputChar)
+// };
+
+// if (upperList) {
+//     inputChar = inputChar.concat(upperCase);
+//     guarenteedInput.push(upperCase[Math.floor( * upperCase.passLength)])
+//         console.log(inputChar)
+// };
+
+// if (numEdit) {
+//     inputChar = inputChar.concat(numList);
+//     guarenteedInput.push(numList[Math.floor( * numList.passLength)])
+//         console.log(inputChar)
+// };
+
+// if (specialEdit) {
+//     inputChar = inputChar.concat(specialList);
+//     guarenteedInput.push(specialList[Math.floor( * specialList.passLength)])
+//         console.log(inputChar)
+// };
+
 if (lowerList) {
-    inputChar = inputChar.concat(lowerCase);
-    guarenteedInput.push(lowerCase[Math.floor(Math.random() * lowerCase.passLength)])
-        console.log(inputChar)
-};
+    inputChar = lowerCase;
+}
 
 if (upperList) {
-    inputChar = inputChar.concat(upperCase);
-    guarenteedInput.push(upperCase[Math.floor(Math.random() * upperCase.passLength)])
-        console.log(inputChar)
-};
+    inputChar = inputChar + upperCase;
+}
 
 if (numEdit) {
-    inputChar = inputChar.concat(numList);
-    guarenteedInput.push(numList[Math.floor(Math.random() * numList.passLength)])
-        console.log(inputChar)
-};
+    inputChar = inputChar + numList;
+}
 
 if (specialEdit) {
-    inputChar = inputChar.concat(specialList);
-    guarenteedInput.push(specialList[Math.floor(Math.random() * specialList.passLength)])
-        console.log(inputChar)
-};
+    inputChar = inputChar + specialList;
+}
 
+console.log(inputChar)
+
+for (let i = 0; i < passLength; i++) {
+
+    let randomInt = Math.floor(Math.random() * inputChar.length)
+    guarenteedInput = guarenteedInput + inputChar[randomInt] 
+
+    console.log(guarenteedInput);
+
+   
+
+}
+document.getElementById('password').innerHTML = `${guarenteedInput}`
 })
+

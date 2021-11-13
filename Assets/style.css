@@ -51,12 +51,21 @@ h2 {
   
 }
 
+.wrapper {
+    width: 100%;
+}
+
+
+
+
 .card-body {
 
         display: flex;
         margin-left: auto;
         margin-right: auto;
         justify-content: center;
+        height: 450px;
+        width: 100%;
         
 }
 
