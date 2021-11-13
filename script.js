@@ -27,7 +27,7 @@ if (!lowerList &&  !upperList && !specialEdit && !numEdit) {
 // validating web choices length
 let passLength = prompt("Enter desired password length between 8-128 characters long");
 
-if (passLength <8 ||passLength <128 || isNaN(passLength)){
+if (passLength <8 ||passLength >128 || isNaN(passLength)){
     alert("Please select a valid number between 8 and 128");
     return;
 };
