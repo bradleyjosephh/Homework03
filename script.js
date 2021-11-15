@@ -36,29 +36,6 @@ let inputChar = [];
 
 let guarenteedInput = [];
 
-// if (lowerList) {
-//     inputChar = inputChar.concat(lowerCase);
-//     guarenteedInput.push(lowerCase)])
-//         console.log(inputChar)
-// };
-
-// if (upperList) {
-//     inputChar = inputChar.concat(upperCase);
-//     guarenteedInput.push(upperCase[Math.floor( * upperCase.passLength)])
-//         console.log(inputChar)
-// };
-
-// if (numEdit) {
-//     inputChar = inputChar.concat(numList);
-//     guarenteedInput.push(numList[Math.floor( * numList.passLength)])
-//         console.log(inputChar)
-// };
-
-// if (specialEdit) {
-//     inputChar = inputChar.concat(specialList);
-//     guarenteedInput.push(specialList[Math.floor( * specialList.passLength)])
-//         console.log(inputChar)
-// };
 
 if (lowerList) {
     inputChar = lowerCase;
@@ -81,7 +58,8 @@ console.log(inputChar)
 for (let i = 0; i < passLength; i++) {
 
     let randomInt = Math.floor(Math.random() * inputChar.length)
-    guarenteedInput = guarenteedInput + inputChar[randomInt] 
+    guarenteedInput = guarenteedInput + inputChar[randomInt]
+    
 
     console.log(guarenteedInput);
 
